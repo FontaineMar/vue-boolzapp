@@ -34,6 +34,8 @@ body{
   width: 60vw;
   height:100%;
   border: 1px solid black;
+  background-image: url('../img/mine.jpg');
+  position: relative;
 }
 
 .userName ,.notifiche ,.friendChoice , .friends{
@@ -43,8 +45,14 @@ body{
   align-items:center;
   width: 100%;
 }
-.userName > {
-justify-content: flex-end;
+
+.iconUserName{
+  display:flex;
+  justify-content: flex-end;
+  width:60%;
+}
+.iconUserName > i{
+  margin:5px;
 }
 
 .azure{
@@ -85,7 +93,6 @@ justify-content: flex-end;
   margin-right:5px;
   height:30px;
 }
-
 .searchChat > i {
   padding: 10px;
   min-width: 40px;
@@ -96,3 +103,58 @@ justify-content: flex-end;
   justify-content: center;
   display: flex;
 }
+
+.iconFriend{
+  display:flex;
+  justify-content: flex-end;
+  width:75%;
+}
+.iconFriend > i{
+  margin:5px;
+}
+
+.writing{
+  height:80px;
+  width:100%;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+}
+.writing > input{
+  height:50px;
+  font-size:1rem;
+  width: 80%;
+}
+.writing > i {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+/* COLORI */
+
+.bkgrLightgrey{
+  background-color: #ebebeb
+}
+
+.bkgrAzure{
+  background-color: #9fdaf9;
+}
+
+.bkgrWhite{
+  background-color: #fff;
+}
+
+.bkgrBeige{
+  background-color: #f3efec
+}
+
+.colorIconUp{
+  color: #b3b3b3;
+}
+.colorIconDown{
+  color:#636363;
+  }
