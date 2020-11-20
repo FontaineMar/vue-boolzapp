@@ -38,11 +38,4 @@ const myApp = new Vue({
       }
     ]
   },
-  methods:{
-    writeNow:function(){
-      this.contacts.map(function(el, i){
-        if
-      })
-    }
-  }
 })
