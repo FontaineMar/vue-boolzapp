@@ -2,7 +2,7 @@ const myApp = new Vue({
   el:'#myBoolzapp',
   data:{
     nomeUtente:{
-      nome: 'myName',
+      nome: 'Marco',
       image: 'img/avatar_io.jpg'
     },
     contacts:[
@@ -37,5 +37,12 @@ const myApp = new Vue({
         lastChat:'03/10/20'
       }
     ]
+  },
+  methods:{
+    writeNow:function(){
+      this.contacts.map(function(el, i){
+        if
+      })
+    }
   }
 })

@@ -6,7 +6,7 @@
 
 body{
   height: 100vh;
-  background: linear-gradient(to top, #d9dbd4 ,#d9dbd4 700px , #019788 20%); 
+  background: linear-gradient(to top, #d9dbd4 ,#d9dbd4 70% , #019788 20%); 
 }
 
 .container{
@@ -16,7 +16,7 @@ body{
   height:95vh;
   margin-top:30px;
   margin-bottom:0px;
-  border: 1px solid black;
+  border: 1px solid #ebebeb;
   display: flex;
 }
 
@@ -24,7 +24,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 40vw;
-  border: 1px solid black;
+  border: 1px solid #ebebeb;
   height: 100%;
 }
 
@@ -33,7 +33,7 @@ body{
   flex-direction: column;
   width: 60vw;
   height:100%;
-  border: 1px solid black;
+  border: 1px solid #ebebeb;
   background-image: url('../img/mine.jpg');
   position: relative;
 }
@@ -41,7 +41,7 @@ body{
 .userName ,.notifiche ,.friendChoice , .friends{
   display: flex;
   height: 80px;
-  border:1px solid black;
+  border:1px solid #ebebeb;
   align-items:center;
   width: 100%;
 }
@@ -55,9 +55,7 @@ body{
   margin:5px;
 }
 
-.azure{
-  background-color: #9fdaf9;
-}
+
 
 .notifiche > i{
   margin-left: 15px;
@@ -78,11 +76,13 @@ body{
   margin-right:5px;
   margin-left:5px;
 }
-
+.chats{
+  overflow:
+}
 .searchChat{
   height:40px;
   display: flex;
-  border:1px solid black;
+  border:1px solid #ebebeb;
   align-items:center;
   justify-content: center;
   padding: 10px;
@@ -116,7 +116,7 @@ body{
 .writing{
   height:80px;
   width:100%;
-  border: 1px solid black;
+  border: 1px solid #ebebeb;
   position: absolute;
   bottom: 0;
   display:flex;
