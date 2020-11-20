@@ -4,12 +4,95 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 100vh;
+  background: linear-gradient(to top, #d9dbd4 ,#d9dbd4 700px , #019788 20%); 
+}
+
 .container{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   height:95vh;
-  margin-top:20px;
-  margin-top:20px;
+  margin-top:30px;
+  margin-bottom:0px;
   border: 1px solid black;
+  display: flex;
+}
+
+.leftCard{
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  border: 1px solid black;
+  height: 100%;
+}
+
+.rightCard{
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  height:100%;
+  border: 1px solid black;
+}
+
+.userName ,.notifiche ,.friendChoice , .friends{
+  display: flex;
+  height: 80px;
+  border:1px solid black;
+  align-items:center;
+  width: 100%;
+}
+.userName > {
+justify-content: flex-end;
+}
+
+.azure{
+  background-color: #9fdaf9;
+}
+
+.notifiche > i{
+  margin-left: 15px;
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius:50%;
+  color: #9fdaf9
+}
+.notifiche > .notificheBell{
+  margin-left:10px;
+}
+
+.styleImg > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right:5px;
+  margin-left:5px;
+}
+
+.searchChat{
+  height:40px;
+  display: flex;
+  border:1px solid black;
+  align-items:center;
+  justify-content: center;
+  padding: 10px;
+}
+.searchChat > input {
+  width: 100%;
+  padding: 10px;
+  margin-right:5px;
+  height:30px;
+}
+
+.searchChat > i {
+  padding: 10px;
+  min-width: 40px;
+  background-color: #fff;
+  height:30px;
+  margin-left:5px;
+  align-items:center;
+  justify-content: center;
+  display: flex;
 }
