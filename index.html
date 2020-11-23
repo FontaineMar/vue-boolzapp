@@ -42,21 +42,23 @@
           <i class="fas fa-search"></i>
           <input type="text" name="" size="30px" value="" placeholder="cerca chat">
         </div>
-        <div class="chats">
-          <div class="friends styleImg" v-for='(el ,index) in contacts'>
-            <img :src="el.image" alt="foto">
-            <h3>{{el.name}}</h3>
-          </div>
+        <div class="chats" >
+            <div class="friends" v-for='(el ,i) in contacts' @click='changeChat(i)'>
+              <div class="styleImg">
+                <img :src="el.image" alt="foto">
+              </div>
+              <h3>{{el.name}}</h3>
+            </div>
         </div>
       </div>
       <div class="rightCard">
         <div class="friendChoice bkgrLightgrey">
           <div class=" styleImg">
-            <img src="img/avatar_1.jpg" alt="foto">
+            <img :src="contacts[courrentContactsIndex]['image']" alt="foto">
           </div>
-          <div class="">
-            <h3>Michele</h3>
-            <h5>ultimo acesso</h5>
+          <div class="chatNow">
+            <h3>{{contacts[courrentContactsIndex]['name']}}</h3>
+            <h5>last seen:{{contacts[courrentContactsIndex]['lastChat']}}</h5>
           </div>
           <div class="iconFriend colorIconUp">
             <i class="fas fa-search"></i>
@@ -65,10 +67,13 @@
           </div>
         </div>
         <div class="chatHero">
+          <div class="" v-for='(key ,i) in contacts[courrentContactsIndex]'>
+            {{key[courrentContactsIndex][sms]}}
+          </div>
         </div>
         <div class="writing bkgrBeige colorIconDown">
           <i class="far fa-smile"></i>
-          <input type="text" placeholder="scrivi messaggio..." name="" value="">
+          <input type="text" placeholder="scrivi messaggio..." name="" value="" v-model='myInput' >
           <i class="fas fa-microphone"></i>
         </div>
       </div>

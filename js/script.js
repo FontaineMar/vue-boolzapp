@@ -3,39 +3,63 @@ const myApp = new Vue({
   data:{
     nomeUtente:{
       nome: 'Marco',
-      image: 'img/avatar_io.jpg'
+      image: 'img/avatar_io.jpg',
     },
     contacts:[
       {
-        name: 'michele',
+        name: 'Michele',
         image: 'img/avatar_1.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       },
       {
-        name: 'rosa',
+        name: 'Rosa',
         image: 'img/avatar_2.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       },
       {
-        name: 'giovanni',
+        name: 'Giovanni',
         image: 'img/avatar_3.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       },
       {
-        name: 'maria',
+        name: 'Maria',
         image: 'img/avatar_4.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       },
       {
-        name: 'pablo',
+        name: 'Pablo',
         image: 'img/avatar_5.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       },
       {
-        name: 'luisa',
+        name: 'Luisa',
         image: 'img/avatar_6.jpg',
-        lastChat:'03/10/20'
+        lastChat:'03/10/20',
+        sms:[]
       }
-    ]
+    ],
+    courrentContactsIndex:0,
+    myInput:'',
   },
+  methods:{
+    changeChat: function(index){
+       this.courrentContactsIndex = index
+    },
+    message: function(){
+      this.contacts[this.courrentContactsIndex]['sms'].push(this.myInput)
+    console.log(this.contacts[this.courrentContactsIndex])
+    }
+  },
+
+})
+
+document.addEventListener('keydown' , function (e){
+  if(e.key == 'Enter'){
+    myApp.message()
+  }
 })

@@ -80,7 +80,7 @@ body{
   margin-left:5px;
 }
 .chats{
-  overflow:scroll;
+  overflow:auto;
 }
 .searchChat{
   height:40px;
