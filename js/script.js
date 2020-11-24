@@ -2,7 +2,7 @@ const myApp = new Vue({
   el:'#myBoolzapp',
   data:{
     nomeUtente:{
-      nome: 'Marco',
+      nome: 'Giulia',
       image: 'img/avatar_io.jpg',
     },
     contacts:[
@@ -24,7 +24,7 @@ const myApp = new Vue({
         ]
       },
       {
-        name: 'Rosa',
+        name: 'Freddy',
         image: 'img/avatar_2.jpg',
         lastChat:'03/10/20',
         history:[
@@ -56,7 +56,7 @@ const myApp = new Vue({
           }
         ]      },
       {
-        name: 'Maria',
+        name: 'Chicco',
         image: 'img/avatar_4.jpg',
         lastChat:'03/10/20',
         history:[
@@ -120,9 +120,7 @@ const myApp = new Vue({
       type: 'sent',
       date: '21 nov 2020'
       })
-    }
-  },
-  computed:{
+    },
     receivedMessage: setTimeout(function(){
       this.contacts[this.courrentContactsIndex].history.push(
         {
