@@ -55,6 +55,7 @@ body{
   display: flex;
   flex: 0 0 50px;
   margin:20px;
+  
 }
 .message{
   border-radius: 10px;

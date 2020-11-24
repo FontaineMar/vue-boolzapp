@@ -117,7 +117,7 @@ const myApp = new Vue({
       this.contacts[this.courrentContactsIndex].history.push(
       {
         text: 'ok va bene',
-        type: 'sent',
+        type: 'received',
         date: '21 nov 2020'
       })
     },
@@ -128,7 +128,7 @@ const myApp = new Vue({
         type: 'sent',
         date: '21 nov 2020'
         });
-        setTimeout(function() {this.receivedMessage()} ,3000);
+        setTimeout(()=> {this.receivedMessage()} ,3000);
     }
   }
 })
