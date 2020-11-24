@@ -21,7 +21,8 @@ const myApp = new Vue({
             date: '21 ott 2020',
             type:'sent'
           }
-        ]      },
+        ]
+      },
       {
         name: 'Rosa',
         image: 'img/avatar_2.jpg',
@@ -110,14 +111,25 @@ const myApp = new Vue({
   },
   methods:{
     changeChat: function(index){
-       this.courrentContactsIndex = index
+      this.courrentContactsIndex = index
     },
     sendMessage: function(){
-    this.contacts[this.courrentContactsIndex][this.history][1].push({
-      text: this.myInput
-    })
-    console.log(this.contacts[this.courrentContactsIndex][this.history][1])
+    this.contacts[this.courrentContactsIndex].history.push(
+      {
+      text: this.myInput,
+      type: 'sent',
+      date: '21 nov 2020'
+      })
     }
   },
-
+  computed:{
+    receivedMessage: setTimeout(function(){
+    return  this.contacts[this.courrentContactsIndex].history.push(
+        {
+          text: 'sei sotto un cielo sbagliato',
+          type: 'sent',
+          date: '21 nov 2020'
+        })
+    },3000)
+  }
 })

@@ -19,6 +19,7 @@ body{
   border: 1px solid #ebebeb;
   display: flex;
   min-width: 800px;
+  flex:0 0 ;
 }
 
 .leftCard{
@@ -53,12 +54,13 @@ body{
   display: flex;
   flex: 0 0 50px;
   margin:20px;
-  
+
 }
 .message{
   border-radius: 10px;
   padding:10px;
   position: relative;
+  min-width: 300px;
 }
 
 .hourMessage{
