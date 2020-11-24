@@ -36,9 +36,42 @@ body{
   width: 60vw;
   height:100%;
   border: 1px solid #ebebeb;
-  background-image: url('../img/mine.jpg');
   position: relative;
   min-width: 30vw;
+}
+.chatHero {
+  background-image: url('../img/mine.jpg');
+  background-repeat: repeat;
+  overflow-y: auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: column nowrap;
+}
+
+.messages{
+  display: flex;
+  flex: 0 0 50px;
+  margin:20px;
+  
+}
+.message{
+  border-radius: 10px;
+  padding:10px;
+  position: relative;
+}
+
+.hourMessage{
+  position:absolute;
+  bottom:0;
+  right:0;
+  font-size:10px;
+  color: grey;
+  padding: 5px;
+}
+
+.f-end{
+  justify-content: flex-end;
 }
 
 .userName ,.notifiche ,.friendChoice , .friends{
@@ -153,6 +186,9 @@ body{
 
 .bkgrBeige{
   background-color: #f3efec
+}
+.bkgrLightYellow{
+  background-color: lightyellow;
 }
 
 .colorIconUp{

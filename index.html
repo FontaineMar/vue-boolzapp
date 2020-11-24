@@ -67,13 +67,18 @@
           </div>
         </div>
         <div class="chatHero">
-          <div class="" v-for='(key ,i) in contacts[courrentContactsIndex]'>
-            {{key[courrentContactsIndex][sms]}}
+          <div class="messages " v-for='contatto in contacts[courrentContactsIndex].history' :class="{'f-end': contatto.type === 'sent'}">
+              <div class="message" :class="contatto.type === 'sent'? 'bkgrWhite' : 'bkgrLightYellow' ">
+                <span> {{contatto.text}} </span>
+                <div class="hourMessage ">
+                  <span> {{contatto.date}}</span>
+                </div>
+              </div>
           </div>
-        </div>
+          </div>
         <div class="writing bkgrBeige colorIconDown">
           <i class="far fa-smile"></i>
-          <input type="text" placeholder="scrivi messaggio..." name="" value="" v-model='myInput' >
+          <input type="text" placeholder="scrivi messaggio..." name="" value="" v-model='myInput' v-on:keyup.enter="sendMessage">
           <i class="fas fa-microphone"></i>
         </div>
       </div>
@@ -82,3 +87,4 @@
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
+<!-- :class={f-end:contatto.type === 'sent'}> -->
