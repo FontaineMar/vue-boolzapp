@@ -124,9 +124,9 @@ const myApp = new Vue({
   },
   computed:{
     receivedMessage: setTimeout(function(){
-    return  this.contacts[this.courrentContactsIndex].history.push(
+      this.contacts[this.courrentContactsIndex].history.push(
         {
-          text: 'sei sotto un cielo sbagliato',
+          text: 'ok va bene',
           type: 'sent',
           date: '21 nov 2020'
         })
