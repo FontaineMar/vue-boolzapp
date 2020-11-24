@@ -40,7 +40,7 @@ const myApp = new Vue({
           }
         ]      },
       {
-        name: 'Giovanni',
+        name: 'Bomba Anarchica',
         image: 'img/avatar_3.jpg',
         lastChat:'03/10/20',
         history:[
@@ -113,21 +113,22 @@ const myApp = new Vue({
     changeChat: function(index){
       this.courrentContactsIndex = index
     },
-    sendMessage: function(){
-    this.contacts[this.courrentContactsIndex].history.push(
+    receivedMessage: function(){
+      this.contacts[this.courrentContactsIndex].history.push(
       {
-      text: this.myInput,
-      type: 'sent',
-      date: '21 nov 2020'
+        text: 'ok va bene',
+        type: 'sent',
+        date: '21 nov 2020'
       })
     },
-    receivedMessage: setTimeout(function(){
+    sendMessage: function(){
       this.contacts[this.courrentContactsIndex].history.push(
         {
-          text: 'ok va bene',
-          type: 'sent',
-          date: '21 nov 2020'
-        })
-    },3000)
+        text: this.myInput,
+        type: 'sent',
+        date: '21 nov 2020'
+        });
+        setTimeout(function() {this.receivedMessage()} ,3000);
+    }
   }
 })
