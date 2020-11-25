@@ -85,12 +85,16 @@ body{
   width: 100%;
 }
 
-.iconUserName{
+.friends:hover{
+  background-color: lightgrey;
+}
+
+.iconUserName {
   display:flex;
   justify-content: flex-end;
   width:60%;
 }
-.iconUserName > i{
+.iconUserName >  a  > i{
   margin:5px;
 }
 
@@ -143,12 +147,12 @@ body{
   display: flex;
 }
 
-.iconFriend{
+.iconFriend {
   display:flex;
   justify-content: flex-end;
   width:75%;
 }
-.iconFriend > i{
+.iconFriend > a > i{
   margin:5px;
 }
 
@@ -168,7 +172,7 @@ body{
   font-size:1rem;
   width: 80%;
 }
-.writing > i {
+.writing > a > i {
   font-size: 1.5rem;
   margin: 15px;
 }
@@ -200,9 +204,9 @@ li{
   background-color: lightyellow;
 }
 
-.colorIconUp{
+.colorIconUp > a{
   color: #b3b3b3;
 }
-.colorIconDown{
+.colorIconDown > a > i{
   color:#636363;
   }

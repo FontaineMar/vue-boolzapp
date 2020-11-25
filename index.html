@@ -26,9 +26,9 @@
           <img :src="nomeUtente.image" alt="foto">
           <h4>{{nomeUtente.nome}}</h4>
           <div class="iconUserName colorIconUp">
-            <i class="fas fa-circle-notch"></i>
-            <i class="fas fa-comment-alt"></i>
-            <i class="fas fa-ellipsis-v"></i>
+          <a href="#"><i class="fas fa-circle-notch"></i></a>
+          <a href="#"><i class="fas fa-comment-alt"></i></a>
+          <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </div>
         <div class="notifiche bkgrAzure">
@@ -44,7 +44,7 @@
         </div>
         <ul class="chats" >
           <template v-if='search.length > 0'>
-            <li class="friends" :class='{bkgrGrey: el === activeContact}' v-for='el in filterContact' @click='changeChat(el)'>
+            <li class="friends" :class='{bkgrLightgrey: el === activeContact}' v-for='el in filterContact' @click='changeChat(el)'>
               <div class="styleImg">
                 <img :src="el.image" alt="foto">
               </div>
@@ -52,7 +52,7 @@
             </li>
           </template>
           <template v-else>
-            <li class="friends" :class='{bkgrGrey: el === activeContact}' v-for='el in contacts' @click='changeChat(el)'>
+            <li class="friends" :class='{bkgrLightgrey: el === activeContact}' v-for='el in contacts' @click='changeChat(el)'>
               <div class="styleImg">
                 <img :src="el.image" alt="foto">
               </div>
@@ -71,9 +71,9 @@
             <h5>{{activeContact.lastChat}}</h5>
           </div>
           <div class="iconFriend colorIconUp">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-paperclip"></i>
-            <i class="fas fa-ellipsis-v"></i>
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-paperclip"></i></a>
+          <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </div>
         <div class="chatHero">
@@ -87,9 +87,9 @@
           </div>
         </div>
         <div class="writing bkgrBeige colorIconDown">
-          <i class="far fa-smile"></i>
+          <a href="#"><i class="far fa-smile"></i></a>
           <input type="text" placeholder="scrivi messaggio..." v-model='myInput' @keyup.enter="sendMessage" >
-          <i class="fas fa-microphone"></i>
+          <a href="#"><i class="fas fa-microphone"></i></a>
         </div>
       </div>
     </div>
