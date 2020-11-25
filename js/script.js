@@ -106,29 +106,39 @@ const myApp = new Vue({
         ]
       }
     ],
-    courrentContactsIndex:0,
+    activeContact: null,
     myInput:'',
+    filterContact:[],
+    search:'',
+  },
+  created(){
+    this.activeContact = this.contacts[0]
   },
   methods:{
-    changeChat: function(index){
-      this.courrentContactsIndex = index
+    changeChat(contact){
+      this.activeContact = contact
     },
     receivedMessage: function(){
-      this.contacts[this.courrentContactsIndex].history.push(
+      this.activeContact.history.push(
       {
-        text: 'ok va bene',
+        text: 'sei sotto un cielo sbagliatooo',
         type: 'received',
-        date: '21 nov 2020'
+        date: (new Date()).toDateString()
       })
     },
     sendMessage: function(){
-      this.contacts[this.courrentContactsIndex].history.push(
+      this.activeContact.history.push(
         {
         text: this.myInput,
         type: 'sent',
-        date: '21 nov 2020'
+        date: (new Date()).toDateString()
         });
+        this.myInput='';
         setTimeout(()=> {this.receivedMessage()} ,3000);
+    },
+    searchContact(contact){
+      this.filterContact = this.contacts.filter( (contact) =>
+      contact.name.toLowerCase().includes(this.search))
     }
   }
 })
