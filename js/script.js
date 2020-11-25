@@ -121,7 +121,7 @@ const myApp = new Vue({
     receivedMessage: function(){
       this.activeContact.history.push(
       {
-        text: 'sei sotto un cielo sbagliatooo',
+        text: 'io te posso canta una canzone',
         type: 'received',
         date: (new Date()).toDateString()
       })
@@ -136,7 +136,7 @@ const myApp = new Vue({
         this.myInput='';
         setTimeout(()=> {this.receivedMessage()} ,3000);
     },
-    searchContact(contact){
+    searchContact(){
       this.filterContact = this.contacts.filter( (contact) =>
       contact.name.toLowerCase().includes(this.search))
     }

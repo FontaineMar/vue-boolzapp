@@ -47,9 +47,9 @@
             <li class="friends" :class='{bkgrGrey: el === activeContact}' v-for='el in filterContact' @click='changeChat(el)'>
               <div class="styleImg">
                 <img :src="el.image" alt="foto">
-              </li>
+              </div>
               <h3>{{el.name}}</h3>
-            </div>
+            </li>
           </template>
           <template v-else>
             <li class="friends" :class='{bkgrGrey: el === activeContact}' v-for='el in contacts' @click='changeChat(el)'>
