@@ -10,32 +10,30 @@ body{
 }
 
 .container{
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  height:90vh;
+  height:600px;
   margin-top:30px;
   margin-bottom:0px;
   border: 1px solid #ebebeb;
   display: flex;
   min-width: 800px;
-  flex:1 0 ;
+  width:1200px;
 }
 
 .leftCard{
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 400px;
   border: 1px solid #ebebeb;
   height: 100%;
   min-width: 30vw;
-
 }
 
 .rightCard{
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 800px;
   height:100%;
   border: 1px solid #ebebeb;
   position: relative;
@@ -44,24 +42,25 @@ body{
 .chatHero {
   background-image: url('../img/mine.jpg');
   background-repeat: repeat;
-  overflow-y: auto;
+  overflow-y: scroll;
   display: flex;
-  height: 100%;
-  width: 100%;
+  width: 100% ;
+  flex:0 0 450px;
   flex-flow: column nowrap;
 }
 
 .messages{
   display: flex;
-  flex: 0 0 50px;
   margin:20px;
 }
 
 .message{
   border-radius: 10px;
+  height:50px;
   padding:10px;
   position: relative;
   min-width: 300px;
+  margin:20px;
 }
 
 .hourMessage{
@@ -70,7 +69,8 @@ body{
   right:0;
   font-size:10px;
   color: grey;
-  padding: 5px;
+  padding: 20px 5px 5px 5px
+
 }
 
 .f-end{
@@ -79,12 +79,11 @@ body{
 
 .userName ,.notifiche ,.friendChoice , .friends{
   display: flex;
-  height: 80px;
+  height: 70px;
   border:1px solid #ebebeb;
   align-items:center;
   width: 100%;
 }
-
 .friends:hover{
   background-color: lightgrey;
 }
@@ -97,8 +96,6 @@ body{
 .iconUserName >  a  > i{
   margin:5px;
 }
-
-
 
 .notifiche > i{
   margin-left: 15px;
@@ -146,7 +143,13 @@ body{
   justify-content: center;
   display: flex;
 }
+.deletePush{
+  position: absolute;
+  top:0;
+  right:0;
+  padding: 5px;
 
+}
 .iconFriend {
   display:flex;
   justify-content: flex-end;
@@ -157,11 +160,8 @@ body{
 }
 
 .writing{
-  height:80px;
-  width:100%;
+  flex: 0 0 80px;
   border: 1px solid #ebebeb;
-  position: absolute;
-  bottom: 0;
   display:flex;
   flex-direction: row;
   justify-content:center;
@@ -192,21 +192,18 @@ li{
 .bkgrAzure{
   background-color: #9fdaf9;
 }
-
 .bkgrWhite{
   background-color: #fff;
 }
-
 .bkgrBeige{
   background-color: #f3efec
 }
 .bkgrLightYellow{
   background-color: lightyellow;
 }
-
 .colorIconUp > a{
   color: #b3b3b3;
 }
 .colorIconDown > a > i{
   color:#636363;
-  }
+}

@@ -80,6 +80,9 @@
           <div class="messages " v-for='contatto in activeContact.history' :class="{'f-end': contatto.type === 'sent'}">
               <div class="message" :class="contatto.type === 'sent'? 'bkgrWhite' : 'bkgrLightYellow' ">
                 <p> {{contatto.text}} </p>
+                <div class="deletePush" @click="deleteMesasage">
+                  <a href="#"><i class="fas fa-chevron-down"></i></a>
+                </div>
                 <div class="hourMessage ">
                   <p> {{contatto.date}}</p>
                 </div>
@@ -87,7 +90,8 @@
           </div>
         </div>
         <div class="writing bkgrBeige colorIconDown">
-          <a href="#"><i class="far fa-smile"></i></a>
+          <div class="emoji"></div>
+          <a href="#" @click=''><i class="far fa-smile"></i></a>
           <input type="text" placeholder="scrivi messaggio..." v-model='myInput' @keyup.enter="sendMessage" >
           <a href="#"><i class="fas fa-microphone"></i></a>
         </div>

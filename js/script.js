@@ -118,7 +118,7 @@ const myApp = new Vue({
     changeChat(contact){
       this.activeContact = contact
     },
-    receivedMessage: function(){
+    receivedMessage(){
       this.activeContact.history.push(
       {
         text: 'io te posso canta una canzone',
@@ -126,7 +126,7 @@ const myApp = new Vue({
         date: (new Date()).toDateString()
       })
     },
-    sendMessage: function(){
+    sendMessage(){
       this.activeContact.history.push(
         {
         text: this.myInput,
@@ -139,6 +139,9 @@ const myApp = new Vue({
     searchContact(){
       this.filterContact = this.contacts.filter( (contact) =>
       contact.name.toLowerCase().includes(this.search))
+    },
+    deleteMesasage(){
+      this.activeContact.history.splice(0,1)
     }
   }
 })
