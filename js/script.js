@@ -40,7 +40,7 @@ const myApp = new Vue({
           }
         ]      },
       {
-        name: 'Bomba Anarchica',
+        name: 'Francesco',
         image: 'img/avatar_3.jpg',
         lastChat:'03/10/20',
         history:[
@@ -121,7 +121,7 @@ const myApp = new Vue({
     receivedMessage(){
       this.activeContact.history.push(
       {
-        text: 'io te posso canta una canzone',
+        text: 'ciao come stai?',
         type: 'received',
         date: (new Date()).toDateString()
       })
@@ -141,7 +141,7 @@ const myApp = new Vue({
       contact.name.toLowerCase().includes(this.search))
     },
     deleteMesasage(){
-      this.activeContact.history.splice(0,1)
+      this.activeContact.history.splice(0,)
     }
   }
 })
